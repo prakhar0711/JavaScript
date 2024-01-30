@@ -6,9 +6,6 @@
 //     // console.log(this);
 //   },
 // };
-
-const { ThirtyFpsSelectRounded } = require("@mui/icons-material");
-
 // user.welcomeMessage();
 // user.username = "sam";
 // user.welcomeMessage();
