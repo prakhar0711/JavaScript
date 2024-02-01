@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121; color: #fff">
+    <ul class="language">
+      <li>Javascript</li>
+    </ul>
+  </body>
+
+  <script>
+    //less efficient as it has to travel whole tree
+    function addLanguage(langName) {
+      const li = document.createElement("li");
+      li.innerHTML = `${langName}`;
+      document.querySelector(".language").appendChild(li);
+    }
+    addLanguage("python");
+    addLanguage("C++");
+
+    //optimised approach
+    function addOptiLanguage(langName) {
+      const li = document.createElement("li");
+      li.appendChild(document.createTextNode(langName));
+      document.querySelector(".language").appendChild(li);
+    }
+    addOptiLanguage("GoLang");
+
+    //Edit
+    const secondchild = document.querySelector("li:nth-child(2)");
+    //secondchild.innerHTML = "C#";
+    const newLi = document.createElement("li");
+    newLi.textContent = "Mojo";
+    secondchild.replaceWith(newLi);
+
+    //Edit 2
+    const nthchild = document.querySelector("li:nth-child(3)");
+    const newli1 = document.createElement("h1");
+    newli1.textContent = "Welcome";
+    nthchild.replaceWith(newli1);
+
+    //Edit 3
+    const mychild = document.querySelector("li:nth-child(3)");
+    const newli2 = document.createElement("li");
+    newli2.appendChild(document.createTextNode("Hello"));
+    document.querySelector(".language").append(newli2);
+
+    //remove
+    const remove = document.querySelector("li:nth-child(1)");
+    remove.remove();  //removes 1st element
+  </script>
+</html>
