@@ -1,0 +1,27 @@
+button {
+  display: inline-block;
+
+  height: 50px;
+  width: 100px;
+}
+
+.container {
+  display: flexbox;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 50vh;
+  margin: 0;
+  background-color: #1a3249;
+  color: #ffffff;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 10px;
+  padding: 20px;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
