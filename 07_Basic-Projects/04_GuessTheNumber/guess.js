@@ -1,44 +1,61 @@
-const randomNumber = parseInt(Math.random() * 100) + 1;
+const randomNumber = parseInt(Math.random() * 100 + 1);
 // console.log(randomNumber);
-const hello = document.querySelector("#randomnum");
-hello.innerHTML += `${randomNumber}`;
+const heading = document.querySelector("#randomnum");
+heading.innerHTML += `${randomNumber}`;
 const submit = document.querySelector("#button");
-const userInput = document.querySelector("#guess");
-const loworhi = document.querySelector(".loworhi");
-const startOver = document.querySelector(".results");
-const para = document.createElement("p");
 
-let playGame = true;
-if (playGame) {
-  submit.addEventListener("click", function (event) {
-    event.preventDefault();
-    const guess = parseInt(userInput.value);
-    console.log(guess);
-    validateGuess(guess);
-  });
-}
-function validateGuess(guess) {
+submit.addEventListener("click", (event) => {
+  event.preventDefault();
+  const guess = parseInt(document.querySelector("#guess").value);
+  // console.log(guess);
   if (isNaN(guess)) {
-    alert("please enter a valid number");
-  } else if (guess === 0 || guess < 1 || guess > 100) {
-    alert("please enter a valid number");
+    alert("please enter a number");
+  } else if (guess === "0" || guess < 1 || guess > 100) {
+    alert("enter a number between 1 and 100");
   } else {
-    displayMessage(guess);
     checkGuess(guess);
   }
-}
+});
+
 function checkGuess(guess) {
-  if (guess === randomNumber) {
-    displayMessage("you won");
-    endGame();
+  remaining(guess);
+  const res = document.querySelector(".loworhi");
+  if (guess == randomNumber) {
+    res.style.color = "green";
+    res.innerHTML = `Correct!`;
+
+    endGame(guess);
   } else if (guess < randomNumber) {
-    displayMessage("number too low");
+    res.style.color = "red";
+    res.innerHTML = `number too low`;
   } else if (guess > randomNumber) {
-    displayMessage("number too low");
+    res.style.color = "orange";
+    res.innerHTML = `number too high`;
   }
 }
 
-function displayMessage(guess) {
-  userInput.value = "";
-  loworhi.innerHTML = `${guess}`;
+function endGame(guess) {
+  const input = document.querySelector("#guess");
+  const submitbutt = document.querySelector("#button");
+  if (guess == randomNumber) {
+    alert(
+      `Game Over!You Won!. The number was ${randomNumber}. Please refresh the page`
+    );
+  } else {
+    alert(`better luck next time!Please refresh the page`);
+  }
+  counter.textContent = 10;
+  input.disabled = true;
+  submitbutt.disabled = true;
+}
+function remaining(guess) {
+  const counter = document.querySelector("#counter");
+  const count = parseInt(counter.textContent);
+  console.log(count);
+  if (guess) {
+    counter.textContent = count - 1;
+  }
+  if (count == 1) {
+    endGame(guess);
+  }
 }

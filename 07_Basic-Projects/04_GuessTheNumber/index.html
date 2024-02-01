@@ -9,14 +9,16 @@
   <body>
     <div class="container">
       <h1>Guess the number</h1>
-      <h3>Enter a number between 1-100</h3>
-      <h4 id="randomnum">Random generated number :</h4>
+      <h4>Enter a number between 1-100</h4>
+      <p id="randomnum">Random generated number(only for testing purpose) :</p>
+
       <form class="form">
         <input type="text" id="guess" />
         <button id="button" type="submit">Guess</button>
       </form>
       <div class="results">
         <p class="loworhi"></p>
+        <p class="remaining">Guesses Remaing:<span id="counter">10</span></p>
       </div>
     </div>
   </body>
