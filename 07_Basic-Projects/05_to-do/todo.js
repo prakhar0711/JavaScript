@@ -8,13 +8,13 @@ const button = document.querySelector("#button");
 button.addEventListener("click", function (event) {
   event.preventDefault();
   const todo = input.value;
-  console.log(todo);
+  // console.log(todo);
   addTodo(todo);
   input.value = "";
 });
 
 function addTodo(todo) {
-  const listItem = document.createElement("li");
+  const listItem = document.createElement("li"); //this is inside function because we need to create new li every time add-button is clicked
   listItem.innerHTML += `<li>${todo}</li><button type='submit' id='delete-button'>Delete</button>`;
   list_items.appendChild(listItem);
 
