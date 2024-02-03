@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-900 text-white">
+    <div class="container mx-auto my-20 p-8 rounded-lg shadow-lg max-w-md">
+      <div
+        class="results bg-gray-800 border border-gray-700 rounded p-4 mb-4 text-right text-3xl font-bold"
+      ></div>
+      <div class="grid grid-cols-4 gap-4">
+        <button id="one" class="button">1</button>
+        <button id="two" class="button">2</button>
+        <button id="three" class="button">3</button>
+        <button id="four" class="button">4</button>
+        <button id="five" class="button">5</button>
+        <button id="six" class="button">6</button>
+        <button id="seven" class="button">7</button>
+        <button id="eight" class="button">8</button>
+        <button id="nine" class="button">9</button>
+        <button id="zero" class="button">0</button>
+        <button id="plus" class="button bg-blue-1000 hover:bg-blue-900">
+          +
+        </button>
+        <button id="minus" class="button bg-blue-1000 hover:bg-blue-900">
+          -
+        </button>
+        <button id="multiply" class="button bg-blue-1000 hover:bg-blue-900">
+          *
+        </button>
+        <button id="divide" class="button bg-blue-1000 hover:bg-blue-900">
+          /
+        </button>
+        <button id="clear" class="button bg-red-600 hover:bg-red-700">C</button>
+        <button id="back" class="button bg-yellow-500 hover:bg-yellow-600">
+          <-
+        </button>
+        <button
+          id="equal"
+          class="button col-span-4 bg-green-500 hover:bg-green-600"
+        >
+          =
+        </button>
+      </div>
+    </div>
+  </body>
+  <script src="calculator.js"></script>
+</html>
