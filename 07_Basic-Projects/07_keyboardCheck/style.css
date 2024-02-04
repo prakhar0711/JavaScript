@@ -1,0 +1,41 @@
+/* Custom CSS for the narrowed futuristic table */
+body {
+  background-color: rgb(3, 16, 33);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ensure the body takes up the full height of the viewport */
+  margin: 0; /* Remove default margin */
+}
+
+.container {
+  text-align: center;
+}
+.parent table {
+  border-radius: 5px;
+  width: 60%; /* Adjust the width as needed */
+  border-collapse: collapse;
+  /* Border color for the table */
+}
+.key {
+  color: white;
+}
+.parent th,
+.parent td {
+  padding: 10px; /* Adjust cell padding */
+  text-align: center;
+  /* Border color for cells */
+}
+
+.parent th {
+  background-color: #22262a; /* Dark background color for the header */
+  color: #ffffff; /* Text color for the header */
+}
+
+.parent tr:hover {
+  background-color: #31353a; /* Background color on hover */
+}
+
+.parent td {
+  color: #93cbdc; /* Text color for the data cells */
+}
