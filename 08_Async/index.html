@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Async</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    //to start execution after a certain interval
+    const printView = setTimeout(function () {
+      console.log("Hello");
+    }, 5000); //prints Hello in console after 2 seconds
+//button press stops the clears the timeout
+  document.querySelector("#stop").addEventListener("click", function () {
+      clearTimeout(printView);
+    });
+
+    //to repeat tasks in an interval
+     setInterval(function () {
+     console.log("Prakhar");
+    }, 3000);  //prints Prakhar in console every 3 seconds
+  
+  </script>
+</html>
