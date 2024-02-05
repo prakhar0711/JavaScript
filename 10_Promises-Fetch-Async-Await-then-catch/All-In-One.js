@@ -112,9 +112,12 @@ fetch("https://jsonplaceholder.typicode.com/users")
   .then(function (response) {
     return response.json();
   })
-    .then(function (data) {
-      console.log(data);
+  .then(function (data) {
+    console.log(data);
   })
   .catch((error) => {
     console.log(error);
   });
+
+// fetch initialises a special type of queue called micro task queue which is faster than task queue
+//so fetch has the highest priority
