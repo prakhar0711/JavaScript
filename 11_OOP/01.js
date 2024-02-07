@@ -22,7 +22,9 @@
 function UserClass(username, email) {
   this.username = username;
   this.email = email;
-
+  this.greetings = function () {
+    console.log(`Email : ${this.email}`);
+  };
   return this; //it is implicitly defined and you need or need not write it
 }
 
@@ -31,3 +33,5 @@ const obj1 = new UserClass("tushar2", "abc2@gmail.com"); //try without using the
 console.log(obj);
 console.log(obj1);
 
+obj.greetings();
+obj1.greetings();
