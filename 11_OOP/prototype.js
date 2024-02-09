@@ -45,3 +45,30 @@ myHeroes.heyTushar(); // returns 'tushar says hello'
 
 //from lines 32-37 we can conclude that if a prototype if give to an array it is not reflected to Object
 //but if prototype is injected to an Object data type then it will work on all data with typeof object
+
+
+//**********************INHERITANCE************************
+const User = {
+  name: "chai",
+  email: "chai@google.com",
+};
+const Teacher = {
+  makeVideos: true,
+};
+
+const TeachingSupport = {
+  isAvailable: false,
+};
+
+const TASupport = {
+  makeAssignment: "JS assignment",
+  fullTime: true,
+  __proto__: TeachingSupport,
+};
+//you can give access outside scope also
+Teacher.__proto__ = User;
+
+//above is an outdated approach
+
+//modern syntax
+Object.setPrototypeOf(TASupport, Teacher);
