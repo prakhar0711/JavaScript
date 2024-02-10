@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React</title>
+  </head>
+  <body>
+    <button>Button Clicked</button>
+  </body>
+
+  <script>
+    class React {
+      constructor() {
+        this.library = "React";
+        this.server = "server started at http://localhost";
+
+        //requirement- as soon as the page loads an object should be created
+        //should get a reference
+        document
+          .querySelector("button")
+          .addEventListener("click", this.handleClick.bind(this));
+      }
+      handleClick() {
+        console.log("button clicked");
+        console.log(this.server ); //for now it returns undefined meaning its reference is lost somewhere but it has the reference of .this but not of this.server.
+        //for these situation there is a special keyword 'bind' to bind the method to the object
+        //after adding .bind() we can see the difference
+        //first try without the .bind() to see the functionality
+      }
+    }
+    const app = new React();
+  </script>
+</html>
