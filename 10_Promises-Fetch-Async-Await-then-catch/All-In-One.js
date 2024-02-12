@@ -84,24 +84,37 @@ const promiseFive = new Promise(function (resolve, reject) {
   }, 1000);
 });
 
+/**
+ * Asynchronously consumes promiseFive and logs the response or any error
+ */
 async function consumePromiseFive() {
   try {
+    // Await the promise and store the response
     const response = await promiseFive;
+    // Log the response
     console.log(response);
   } catch (err) {
+    // Log any errors
     console.log(err);
   }
 }
 consumePromiseFive();
 
 //#6 fetch async await
+/**
+ * Fetches user data from a remote API and logs the result.
+ */
 async function getUsers() {
   try {
+    // Fetch user data
     const response = await fetch("https://jsonplaceholder.typicode.com/users");
+    // Extract JSON data
     const data = await response.json();
+    // Log the user data
     console.log(data);
   } catch (error) {
-    console.log("error ");
+    // Log any errors
+    console.log("Error fetching user data: ", error);
   }
 }
 getUsers();

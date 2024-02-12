@@ -15,7 +15,15 @@
 
 */
 
+/**
+ * Adds two numbers together.
+ * 
+ * @param {number} x - The first number to add.
+ * @param {number} y - The second number to add.
+ * @returns {number} The sum of x and y.
+ */
 function addNum(x, y) {
+  // Adds x and y together and returns the result
   return x + y;
 }
 const result = addNum(10, 7);

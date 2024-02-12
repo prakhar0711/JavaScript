@@ -19,13 +19,22 @@
 
 //new keyword is a constructor function it gives you a new instance
 
+/**
+ * Represents a user with a username and email
+ * @constructor
+ * @param {string} username - The username of the user
+ * @param {string} email - The email of the user
+ */
 function UserClass(username, email) {
   this.username = username;
   this.email = email;
+
+  /**
+   * Prints the user's email
+   */
   this.greetings = function () {
     console.log(`Email : ${this.email}`);
   };
-  return this; //it is implicitly defined and you need or need not write it
 }
 
 const obj = new UserClass("tushar", "abc@gmail.com"); //try without using the new keyword

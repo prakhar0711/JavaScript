@@ -21,21 +21,31 @@
   <script>
     //object creation used to send and receive data
     const requestURL = "https://api.github.com/users/prakhar0711"; //you can use your own github api
-    const xhr = new XMLHttpRequest(); //pbject creation
-    xhr.onreadystatechange = function () {
-      console.log(xhr.readyState);
-      if (xhr.readyState === 4) {
-        const data = JSON.parse(this.responseText); //parse() method parses a JSON string, and returns a JSON object.
-        console.log(data.name);
-        console.log(data.avatar_url);
-        const img = data.avatar_url;
-          const body=document.querySelector("body")
+// Create a new XMLHttpRequest object
+const xhr = new XMLHttpRequest();
 
-          //prints image and name to the webpage
-        body.innerHTML=`<img src=${img}>
-        <p>${data.name}</p>`
-      }
-    };
+// Define the callback function for when the state changes
+xhr.onreadystatechange = function () {
+  // Log the current state of the XMLHttpRequest object
+  console.log(xhr.readyState);
+
+  // Check if the request is complete
+  if (xhr.readyState === 4) {
+    // Parse the response text as JSON
+    const data = JSON.parse(this.responseText);
+    // Log the name and avatar URL from the parsed JSON data
+    console.log(data.name);
+    console.log(data.avatar_url);
+
+    // Get the avatar URL from the data
+    const img = data.avatar_url;
+    // Get the body element of the webpage
+    const body = document.querySelector("body");
+
+    // Display the image and name on the webpage
+    body.innerHTML = `<img src=${img}><p>${data.name}</p>`;
+  }
+};
 
     xhr.open("GET", requestURL); //The XMLHttpRequest method open() initializes a newly-created request, or re-initializes an existing one.
     xhr.send(); //The XMLHttpRequest method send() sends the request to the server.
