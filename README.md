@@ -27,7 +27,7 @@ To clone this repository and start working on the projects, you can use the foll
 
 ```
 git clone [https://github.com/prakhar0711/Learn-JavaScript](https://github.com/prakhar0711/Learn-JavaScript)
-
+```
 
 Once you have cloned the repository, you can open the `index.html` file in your web browser to start working on the projects.
 
