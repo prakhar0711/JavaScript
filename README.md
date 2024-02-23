@@ -7,13 +7,13 @@ This repository contains a roadmap for learning JavaScript, along with basic pro
 The roadmap is organized into the following sections:
 
 - **Basics:** This section covers the fundamentals of JavaScript, including variables, data types, operators, expressions, and control flow.
-- **Objects:** This section covers how to create and work with objects in JavaScript.
+- **Iteration:** This section covers the concept of loops in javascript.
 - **DOM:** This section covers how to interact with the Document Object Model (DOM) to manipulate web pages.
 - **Basic Projects:** This section includes a few simple projects to practice your JavaScript skills.
 - **Async:** This section covers asynchronous programming in JavaScript, including promises and async/await.
 - **API:** This section covers how to use APIs in JavaScript to fetch data from external sources.
-- **OOP:** This section covers object-oriented programming concepts in JavaScript.
 - **Promises-Fetch-Async-Await-then-catch:** This section covers concepts of promises ,async behaviour, different ways to use promises and javascript's asynchronous behaviour.
+- **OOP:** This section covers object-oriented programming concepts in JavaScript.
 
 ## Projects
 
