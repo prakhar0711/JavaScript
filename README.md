@@ -1,4 +1,4 @@
-# Learn JavaScript
+# Learn JavaScript - Learn By Doing !!
 
 This repository contains a roadmap for learning JavaScript, along with basic projects and commented notes.
 
